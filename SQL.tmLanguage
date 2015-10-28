@@ -196,7 +196,7 @@
 			<string>(?xi)
 
 				# normal stuff, capture 1
-				 \b(bigint|bigserial|bit|boolean|box|bytea|cidr|circle|date|double\sprecision|inet|int|integer|line|lseg|macaddr|money|oid|path|point|polygon|real|serial|smallint|sysdate|text)\b
+				 \b(bigint|bigserial|bit|boolean|box|bytea|cidr|circle|date|double\sprecision|inet|int|integer|line|lseg|macaddr|money|oid|path|point|polygon|real|serial|smallint|sysdate|text|uniqueidentifier)\b
 
 				# numeric suffix, capture 2 + 3i
 				|\b(bit\svarying|character\s(?:varying)?|tinyint|var\schar|float|interval)\((\d+)\)
@@ -229,7 +229,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i:\b(select(\s+distinct)?|insert\s+(ignore\s+)?into|update|delete|truncate|from|set|where|group\sby|or|like|and|into\s(outfile|dumpfile)?|load\slocal|infile|fields|lines|union(\s+all)?|having|(order|terminated|enclosed)\sby|limit|(inner|cross)\s+join|straight_join|(left|right)(\s+outer)?\s+join|natural(\s+(left|right)(\s+outer)?)?\s+join)\b)</string>
+			<string>(?i:\b(select(\s+distinct)?|insert\s+(ignore\s+)?into|update|delete|truncate|from|set|where|group\sby|or|like|and|into\s(outfile|dumpfile)?|load\slocal|infile|fields|lines|union(\s+all)?|having|(order|terminated|enclosed)\sby|limit|(inner|cross)\s+join|straight_join|(left|right)(\s+outer)?\s+join|natural(\s+(left|right)(\s+outer)?)?\s+join|declare)\b)</string>
 			<key>name</key>
 			<string>keyword.other.DML.sql</string>
 		</dict>
@@ -247,7 +247,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i:\b(begin(\s+work)?|start\s+transaction|commit(\s+work)?|rollback(\s+work)?)\b)</string>
+			<string>(?i:\b(begin(\s+work)?|start\s+tran(saction)?|commit(\s+work)?|rollback(\s+work)?)\b)</string>
 			<key>name</key>
 			<string>keyword.other.LUW.sql</string>
 		</dict>
